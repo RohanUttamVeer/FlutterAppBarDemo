@@ -8,6 +8,7 @@ void main() {
       appBar: AppBar(
         //1
         title: Text("AppBar Demo"),
+        automaticallyImplyLeading: false, // to disable/enable the leading widget
         //App bar heading title
         //2
         centerTitle: true,
@@ -15,14 +16,15 @@ void main() {
         //3
         backgroundColor: Color(0xFF85C675),
         //4
-        elevation: 4,
+        elevation: 0,
         // shadow under appbar
-        // leading: IconButton( // icons o the right of appbar
-        //   icon: Icon(Icons.settings),
+        // leading: IconButton( // icons on the left of appbar
+        //     icon: Icon(Icons.settings)),
         //5
-        actionsIconTheme: IconThemeData(color: Colors.red), //theme for action buttons
+        actionsIconTheme: IconThemeData(color: Colors.red),
+        //theme for action buttons
         //6
-        actions: <Widget>[ //action buttons on appbar on the left
+        actions: <Widget>[  //action buttons on appbar on the right
           IconButton(
             //icons on the left of appbar
             icon: Icon(Icons.add_circle_outline),
