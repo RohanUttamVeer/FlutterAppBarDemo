@@ -32,7 +32,7 @@ void main() {
             //shapes your appbar
             borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(55),
-          bottomRight: Radius.circular(0),
+          bottomRight: Radius.circular(55),
         )),
         iconTheme: IconThemeData(opacity: 0.6),
         // icons faded
@@ -81,19 +81,13 @@ void main() {
           ],
         ),
       ),
+      body: Center(
+        child: Image(
+          // image added using url
+          image: NetworkImage(
+              'https://firebasestorage.googleapis.com/v0/b/dashatar-dev.appspot.com/o/dashatars%2FRGFzaGF0YXJfQm9udXNfU2V0c19Cb251c19D.png?alt=media'),
+        ),
+      ),
     ),
   ));
-// hide status bar for single screen
-//   @override
-//   void initState() {
-//     SystemChrome.setEnabledSystemUIOverlays([SystemUiOverlay.bottom]);
-//     super.initState();
-//   }
-//
-//   @override
-//   void dispose() {
-//     SystemChrome.setEnabledSystemUIOverlays(
-//         [SystemUiOverlay.top, SystemUiOverlay.bottom]);
-//     super.dispose();
-//   }
 }
