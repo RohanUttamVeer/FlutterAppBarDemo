@@ -81,13 +81,23 @@ void main() {
           ],
         ),
       ),
-      body: Center(
-        child: Image(
+      body: ListView(children: <Widget>[
+        //scrollable list view
+        Image(
           // image added using url
           image: NetworkImage(
               'https://firebasestorage.googleapis.com/v0/b/dashatar-dev.appspot.com/o/dashatars%2FRGFzaGF0YXJfQm9udXNfU2V0c19Cb251c19D.png?alt=media'),
         ),
-      ),
+        Image(
+          //images added to new assets directory
+          //then created an asset section in pubspec.yaml
+          //read pubspec.yaml
+          image: AssetImage('assets/dash1.png'),
+        ),
+        Image(
+          image: AssetImage('assets/dash2.png'),
+        ),
+      ]),
     ),
   ));
 }
