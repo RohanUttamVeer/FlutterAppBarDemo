@@ -83,11 +83,46 @@ void main() {
       ),
       body: ListView(children: <Widget>[
         //scrollable list view
-        Image(
-          // image added using url
-          image: NetworkImage(
-              'https://firebasestorage.googleapis.com/v0/b/dashatar-dev.appspot.com/o/dashatars%2FRGFzaGF0YXJfQm9udXNfU2V0c19Cb251c19D.png?alt=media'),
+        Image.asset(
+          'assets/dash2.png',
+          color: Colors.green,
+          //image properties
+          colorBlendMode: BlendMode.difference,
+          // fit: BoxFit.fitHeight,
+          // alignment: Alignment.bottomRight,
+          // repeat: ImageRepeat.noRepeat,
+          // filterQuality: FilterQuality.low,
+          // matchTextDirection: false,
+          // gaplessPlayback: false,
+          // isAntiAlias: false,
         ),
+        Image(
+            image: NetworkImage(
+              'https://firebasestorage.googleapis.com/v0/b/dashatar-dev.appspot.com/o/dashatars%2FRGFzaGF0YXJfQm9udXNfU2V0c19Cb251c19D.png?alt=media',
+            ),
+          errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
+            return const Text('error 010');
+          },
+          // image added using url
+          height: 200,
+          width: 300,
+          // frameBuilder: (
+          //   //frameBuilder for decoration of image
+          //   BuildContext context,
+          //   Widget child,
+          //   int frame,
+          //   bool wasSynchronouslyLoaded,
+          // ) {
+          //   return Container(
+          //     padding: const EdgeInsets.all(10.0),
+          //     child: child,
+          //     decoration: BoxDecoration(
+          //       shape: BoxShape.circle,
+          //       color: Color(0xFFF0BFFF),
+          //     ),
+          //   );
+          // }
+          ),
         Image(
           //images added to new assets directory
           //then created an asset section in pubspec.yaml
