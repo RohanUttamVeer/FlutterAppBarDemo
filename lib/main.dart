@@ -97,13 +97,14 @@ void main() {
           // isAntiAlias: false,
         ),
         Image(
-            image: NetworkImage(
-              'https://firebasestorage.googleapis.com/v0/b/dashatar-dev.appspot.com/o/dashatars%2FRGFzaGF0YXJfQm9udXNfU2V0c19Cb251c19D.png?alt=media',
-            ),
-          errorBuilder: (BuildContext context, Object exception, StackTrace? stackTrace) {
+          // image added using url
+          image: NetworkImage(
+            'https://firebasestorage.googleapis.com/v0/b/dashatar-dev.appspot.com/o/dashatars%2FRGFzaGF0YXJfQm9udXNfU2V0c19Cb251c19D.png?alt=media',
+          ),
+          errorBuilder:
+              (BuildContext context, Object exception, StackTrace? stackTrace) {
             return const Text('error 010');
           },
-          // image added using url
           height: 200,
           width: 300,
           // frameBuilder: (
@@ -122,7 +123,7 @@ void main() {
           //     ),
           //   );
           // }
-          ),
+        ),
         Image(
           //images added to new assets directory
           //then created an asset section in pubspec.yaml
@@ -132,7 +133,31 @@ void main() {
         Image(
           image: AssetImage('assets/dash2.png'),
         ),
+        Placeholder(
+          //placeholder for future use
+          color: Colors.green,
+          strokeWidth: 5.0,
+          fallbackHeight: 100.0,
+          fallbackWidth: 100.0,
+        ),
       ]),
+      bottomNavigationBar:
+      BottomAppBar(
+        shape: CircularNotchedRectangle(),
+        child: Container(
+          height: 50.0,
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: (){},
+        backgroundColor: Colors.green,
+        splashColor: Colors.blue,
+        // hoverColor: Colors.black,
+        // focusColor: Colors.orange,
+        foregroundColor: Colors.red,
+        child: Icon(Icons.lightbulb),
+      ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     ),
   ));
 }
